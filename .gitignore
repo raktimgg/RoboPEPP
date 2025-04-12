@@ -1,0 +1,8 @@
+screen*
+checkpoints/*
+wandb/*
+*.mp4
+.vscode/*
+build/*
+*/__pycache__/*
+bbox_grounding_dino/Grounded-SAM-2

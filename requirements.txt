@@ -1,0 +1,11 @@
+numpy==1.26.4
+torch==2.4.1
+torchvision==0.19.1
+accelerate 
+wandb
+scipy
+opencv-python
+matplotlib
+kornia
+roboticstoolbox-python
+pytorch_kinematics

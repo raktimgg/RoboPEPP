@@ -1,0 +1,34 @@
+robot: baxter
+data:
+  dataset_name: dream
+  batch_size: 40
+  color_jitter_strength: 0.0
+  crop_scale:
+  - 0.3
+  - 1.0
+  crop_size: 224
+  image_folder: dream
+  num_workers: 16
+  pin_mem: true
+  root_path: data/ #TODO: change to your data path
+  use_color_distortion: false
+  use_gaussian_blur: false
+  use_horizontal_flip: false
+  test_seq: synthetic/baxter_synth_test_dr #choose from synthetic/kuka_synth_test_photo and synthetic/kuka_synth_test_dr
+model:
+  backbone: vit_base
+  pred_depth: 12
+  pred_emb_dim: 384
+  read_checkpoint: null
+  jepa_path : /data/raktim/Projects/JEPA/ijepa/logs/jepa_joints-ep200.pth.tar #TODO: change to your ijepa path
+  patch_size : 16
+  image_shape : 224
+  urdf_file: urdfs/Baxter/baxter_description/urdf/baxter.urdf #TODO: change to your urdf path
+training:
+  epochs: 200
+  use_accelerate: true
+  log_wandb: true
+  max_lr: [1e-4, 1e-4, 1e-4, 1e-4]
+  weight_decay: 1e-7
+  final_div_factor: 1e4
+

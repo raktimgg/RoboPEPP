@@ -1,0 +1,68 @@
+# Aspose.3D Wavefront OBJ Exporter
+# Copyright 2004-2022 Aspose Pty Ltd.
+# File created: 08/01/2022 23:28:53
+
+newmtl Part__Mirroring_004_001
+	Ka 0 0 0
+	Kd 0.8980392 0.9176471 0.9294118
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 0
+newmtl Part__Mirroring002_004_001
+	Ka 0 0 0
+	Kd 0.2509804 0.2509804 0.2509804
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 0
+newmtl Part__Mirroring003_004_001
+	Ka 0 0 0
+	Kd 0.2509804 0.2509804 0.2509804
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 0
+newmtl Part__Mirroring005_004_001
+	Ka 0 0 0
+	Kd 0.2509804 0.2509804 0.2509804
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 0
+newmtl Part__Mirroring006_004_001
+	Ka 0 0 0
+	Kd 0.2509804 0.2509804 0.2509804
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 0
+newmtl Part__Mirroring007_004_001
+	Ka 0 0 0
+	Kd 0.2509804 0.2509804 0.2509804
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 0
+newmtl Part__Mirroring001_004_002
+	Ka 0 0 0
+	Kd 0.2509804 0.2509804 0.2509804
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.03125 0.03125 0.03125
+	Ns 0
+newmtl Part__Mirroring004_004_002
+	Ka 0 0 0
+	Kd 1 1 1
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 0
