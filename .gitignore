@@ -6,3 +6,4 @@ wandb/*
 build/*
 */__pycache__/*
 bbox_grounding_dino/Grounded-SAM-2
+*.pyc

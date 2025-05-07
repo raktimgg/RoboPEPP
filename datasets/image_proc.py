@@ -538,22 +538,19 @@ def project_to_image_plane(pred_kp_3d_cam, K):
     return projected_2d_points
 
 
-def get_extended_bbox(wmin, hmin, wmax, hmax, img_loc, kp=None):
+def get_extended_bbox(wmin, hmin, wmax, hmax, img_loc):
     if "panda_synth_test_photo" in img_loc:
         return np.array([wmin-10, hmin-10, wmax+10, hmax+10])
     if "panda_synth_test_dr" in img_loc:
         return np.array([wmin-40, hmin-30, wmax+10, hmax+10])
     if "azure" in img_loc:
-        # return np.array([wmin-20, hmin-20, wmax+20, hmax])
         return np.array([wmin-10, hmin-30, wmax+20, hmax])
     if "kinect" in img_loc:
-        # return np.array([wmin-150, hmin-100, wmax+200, hmax+200])
         return np.array([wmin-150, hmin-100, wmax+200, hmax+200])
     if "realsense" in img_loc:
         return np.array([wmin-150, hmin, wmax+50, hmax])
     if "orb" in img_loc:
         return np.array([wmin, hmin, wmax, hmax])
-        # return np.array([wmin-100, hmin-100, wmax+100, hmax+50])
     if "kuka_synth_test_photo" in img_loc:
         return np.array([wmin-100, hmin-50, wmax+50, hmax+50])
     if "kuka_synth_test_dr" in img_loc:
@@ -569,11 +566,20 @@ def get_extended_bbox(wmin, hmin, wmax, hmax, img_loc, kp=None):
     # wmax, hmax = np.max(kp,axis=0)
     # return np.array([wmin-50, hmin-50, wmax+50, hmax+50])
     
-def get_pnp_thresh(img_loc):
+def get_pnp_thresh(img_loc, ssl=False):
     if "panda_synth_test_photo" in img_loc:
         return 0.35
     if "panda_synth_test_dr" in img_loc:
         return 0.325
+    if ssl:
+        if "azure" in img_loc:
+            return 0.3
+        if "kinect" in img_loc:
+            return 0.3
+        if "realsense" in img_loc:
+            return 0.6
+        if "orb" in img_loc:
+            return 0.3
     if "azure" in img_loc:
         return 0.5
     if "kinect" in img_loc:

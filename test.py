@@ -27,6 +27,8 @@ from datasets.BPnP import BPnP, BPnP_m3d, batch_transform_3d
 def main(args):
     device = 'cuda'
     robot_name = args['robot']
+    if robot_name == 'panda':
+        checkpoint_name = args['data']['checkpoint_name']
     root_path = args['data']['root_path']
     image_folder = args['data']['image_folder']
     num_workers = args['data']['num_workers']
@@ -136,7 +138,9 @@ def main(args):
                                 joint_mean=joint_mean, joint_std=joint_std, npose=12, nkeypoints=17, urdf_file=urdf_file).to(device)
 
     if robot_name == 'panda':
-        checkpoint = torch.load('checkpoints/robopepp_panda.pt', map_location=torch.device('cpu'))['model_state_dict']
+        checkpoint = torch.load('checkpoints/'+checkpoint_name, map_location=torch.device('cpu'))
+        if 'module_state_dict' in checkpoint:
+            checkpoint = checkpoint['module_state_dict']
     elif robot_name == 'kuka':
         checkpoint = torch.load('checkpoints/robopepp_kuka.pt', map_location=torch.device('cpu'))
     elif robot_name == 'baxter':
@@ -241,7 +245,10 @@ def main(args):
             B, C, _, _ = pred_keypoints.shape
             pred_kp_3d_cam = torch.zeros_like(pred_kp_3d_cam)
             for ii in range(B):
-                thresh = get_pnp_thresh(metadata['img_path'][ii])
+                if 'ssl' in checkpoint_name:
+                    thresh = get_pnp_thresh(metadata['img_path'][ii], ssl=True)
+                else:
+                    thresh = get_pnp_thresh(metadata['img_path'][ii])
                 valid_indices2 = torch.where(pred_keypoints[ii].view(1, C,-1).max(dim=-1).values>thresh)[1]
                 thresh -= 0.025
                 while valid_indices2.shape[0] < 4:

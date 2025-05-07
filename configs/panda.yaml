@@ -16,8 +16,9 @@ data:
   use_gaussian_blur: false
   use_horizontal_flip: false
   pre_computed_bbox: true
-  test_seq: synthetic/panda_synth_test_photo #choose from synthetic/panda_synth_test_photo, synthetic/panda_synth_test_dr, or real/panda-3cam_azure, real/panda-3cam_kinect360, real/panda-3cam_realsense, and real/panda-orb
+  test_seq: real/panda-3cam_realsense #choose from synthetic/panda_synth_test_photo, synthetic/panda_synth_test_dr, or real/panda-3cam_azure, real/panda-3cam_kinect360, real/panda-3cam_realsense, and real/panda-orb
   s2r_seq: real/panda-3cam_realsense #choose from real/panda-3cam_realsense, real/panda-3cam_azure, real/panda-3cam_kinect360, and real/panda-orb
+  checkpoint_name: robopepp_ssl_realsense.pt
 model:
   backbone: vit_base
   pred_depth: 12

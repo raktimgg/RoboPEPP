@@ -244,7 +244,7 @@ class DREAM(torch.utils.data.Dataset):
         bbox_max0 = np.array(bbox["max"])
         
         wmin, hmin, wmax, hmax = bbox["min"][0], bbox["min"][1], bbox["max"][0], bbox["max"][1]
-        extended_bbox = get_extended_bbox(wmin, hmin, wmax, hmax, self.image_paths[index], keypoints.numpy())
+        extended_bbox = get_extended_bbox(wmin, hmin, wmax, hmax, self.image_paths[index])
 
         wmin, hmin, wmax, hmax = extended_bbox
         extended_bbox = np.array([max(0,wmin),max(0,hmin),min(640,wmax),min(480,hmax)])

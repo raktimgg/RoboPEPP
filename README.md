@@ -1,5 +1,5 @@
 # RoboPEPP: Vision-Based Robot Pose and Joint Angle Estimation through Embedding Predictive Pre-Training
-## CVPR 2025
+## CVPR 2025 (Highlight)
 📖 Paper: To appear in the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025  
 📖 Pre-print: [arXiv](https://arxiv.org/abs/2411.17662)  
 **Authors:** Raktim Gautam Goswami<sup>1</sup>, Prashanth Krishnamurthy<sup>1</sup>, Yann LeCun<sup>2,3</sup>, Farshad Khorrami<sup>1</sup>  
@@ -72,7 +72,7 @@ Run the test code using the trained weights as follows
 ```
 python test.py --config <path-to-config-file>
 ```
-This will evaluate the model on the `test_seq` specified in your config file, and print metrics including ADD AUC, PCK, and Joint Error.
+This will evaluate the model on the `test_seq` specified in your config file, and print metrics including ADD AUC, PCK, and Joint Error. If evaluating the sim-to-real fine-tuned models, change the `checkpoint_name` in the config file to the correct .pt file (e.g., robopepp_ssl_realsense.pt)
 
 
 ### Sim-to-Real Fine-Tuning
