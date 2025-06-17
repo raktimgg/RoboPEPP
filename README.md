@@ -1,6 +1,6 @@
 # RoboPEPP: Vision-Based Robot Pose and Joint Angle Estimation through Embedding Predictive Pre-Training
 ## CVPR 2025 (Highlight)
-📖 Paper: To appear in the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025  
+📖 Paper: [RoboPEPP](https://openaccess.thecvf.com/content/CVPR2025/papers/Goswami_RoboPEPP_Vision-Based_Robot_Pose_and_Joint_Angle_Estimation_through_Embedding_CVPR_2025_paper.pdf)    
 📖 Pre-print: [https://arxiv.org/abs/2411.17662](https://arxiv.org/abs/2411.17662)  
 📹 Video: [https://youtu.be/pbM60-kHSdE](https://youtu.be/pbM60-kHSdE)
 
@@ -98,3 +98,11 @@ This will fine-tune the model and store the updated weights in the `checkpoints/
 
 ## 📧 Citation
 ```bibtex
+@inproceedings{goswami2025robopepp,
+  title={Robopepp: Vision-based robot pose and joint angle estimation through embedding predictive pre-training},
+  author={Goswami, Raktim Gautam and Krishnamurthy, Prashanth and LeCun, Yann and Khorrami, Farshad},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={6930--6939},
+  year={2025}
+}
+```
