@@ -245,8 +245,8 @@ class JointMaskCollator(object):
             # -- Sample block top-left corner
             if keypoint is not None:
                 x, y = keypoint
-                top = torch.randint(np.clip(int(x-h/2), 0, self.height), np.clip(int(x+h/2), 0, self.height), (1,))
-                left = torch.randint(np.clip(int(y-h/2), 0, self.width), np.clip(int(y+h/2), 0, self.width), (1,))
+                top = torch.randint(np.clip(int(y-h/2), 0, self.height), np.clip(int(y+h/2), 0, self.height), (1,))
+                left = torch.randint(np.clip(int(x-w/2), 0, self.width), np.clip(int(x+w/2), 0, self.width), (1,))
             else:
                 top = torch.randint(0, self.height - h, (1,))
                 left = torch.randint(0, self.width - w, (1,))
@@ -292,12 +292,12 @@ class JointMaskCollator(object):
             generator=g,
             scale=self.pred_mask_scale,
             aspect_ratio_scale=self.aspect_ratio)
-        print(p_size)
+        # print(p_size)
         e_size = self._sample_block_size(
             generator=g,
             scale=self.enc_mask_scale,
             aspect_ratio_scale=(1., 1.))
-        print(e_size)
+        # print(e_size)
 
         collated_masks_pred, collated_masks_enc = [], []
         min_keep_pred = self.height * self.width
