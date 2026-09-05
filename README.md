@@ -4,6 +4,8 @@
 📖 Pre-print: [https://arxiv.org/abs/2411.17662](https://arxiv.org/abs/2411.17662)  
 📹 Video: [https://youtu.be/pbM60-kHSdE](https://youtu.be/pbM60-kHSdE)
 
+🌐 Website: [RoboPEPP](https://raktimgg.github.io/robopepp-website/)
+
 **Authors:** Raktim Gautam Goswami<sup>1</sup>, Prashanth Krishnamurthy<sup>1</sup>, Yann LeCun<sup>2,3</sup>, Farshad Khorrami<sup>1</sup>  
 <sup>1</sup> New York University Tandon School of Engineering  
 <sup>2</sup> New York University Courant Institute of Mathematical Sciences  
